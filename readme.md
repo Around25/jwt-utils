@@ -73,6 +73,7 @@ const isValid = TokenUtils.isValid(token, validationFunc);
 ```
 
 ### Usage with React Native
+In the `React Native` environment, `store` and `get` methods return promises (due to the `async` nature of the storage system).
 ```js
 import { AsyncStorage } from 'react-native'
 import TokenService from 'jwt-utils'
@@ -81,8 +82,6 @@ export default new TokenService({
   storageSystem: AsyncStorage
 });
 ```
-
-In the `React Native` environment, `store` and `get` methods return promises (due to the `async` nature of the storage system).
 
 ```js
 const result = await TokenUtils.store(token);
