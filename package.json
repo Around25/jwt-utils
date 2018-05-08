@@ -1,6 +1,6 @@
 {
-  "name": "jwt-utils",
-  "version": "1.0.0",
+  "name": "@around25/jwt-utils",
+  "version": "1.0.1",
   "description": "Perform jwt token operations like store, get, decode, get expiration date, check if expired, validate, remove from storage",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,18 @@
   "license": "MIT",
   "dependencies": {
     "jwt-decode": "^2.2.0"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Around25/jwt-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Around25/jwt-utils/issues"
+  },
+  "homepage": "https://github.com/Around25/jwt-utils#readme"
 }
