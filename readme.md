@@ -5,7 +5,7 @@ Works in `React` and `React Native`.
 
 ## Installation
 ```
-npm install --save jwt-utils
+npm install --save @around25/jwt-utils
 ```
 
 ## Usage
