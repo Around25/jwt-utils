@@ -72,7 +72,7 @@ Checks if token is valid, simply by checking its existence. You can optionally u
 const isValid = TokenUtils.isValid(token, validationFunc);
 ```
 
-### Usage with React Native
+## Usage with React Native
 In the `React Native` environment, `store` and `get` methods return promises (due to the `async` nature of the storage system).
 ```js
 import { AsyncStorage } from 'react-native'
