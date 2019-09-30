@@ -16,7 +16,7 @@ npm install --save @around25/jwt-utils
 Initialize the package and then import in wherever you need it. The constructor takes a single config object as parameter. The `storageSystem` property is required.
 
 ```js
-import TokenService from 'jwt-utils'
+import TokenService from '@around25/jwt-utils'
 
 const TokenUtils = new TokenService({
   storageSystem: window.localStorage
