@@ -1,14 +1,12 @@
-## jwt-utils
+# jwt-utils
 ![npm version](https://img.shields.io/npm/v/@around25/jwt-utils)
-![npm downloads](https://img.shields.io/npm/dt/@around25/jwt-utils)
+![npm downloads](https://img.shields.io/npm/dm/@around25/jwt-utils)
 
 A small package to perform [JWT](https://jwt.io/) token operations (store, get, decode, get expiration date, check if expired, validate, remove from storage).
 
-Works in `React` and `React Native`.
-
 ## Installation
 ```
-npm install --save @around25/jwt-utils
+yarn add @around25/jwt-utils
 ```
 
 ## Usage
