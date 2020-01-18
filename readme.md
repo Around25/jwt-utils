@@ -25,7 +25,7 @@ export default TokenUtils
 
 In the `React` environment, it can be either [window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or [window.sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage). And it's totally synchronous.
 
-#### Store
+### `store(token)`
 Stores token using the specified storage system. Token must be a `string`.
 ```js
 // Take a properly formatted JWT token
@@ -34,7 +34,7 @@ const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuYW1lIjoiSm9o
 TokenUtils.store(token);
 ```
 
-#### Get
+### `get()`
 Retrieves the stored token if set, `undefined` otherwise.
 ```js
 const token = TokenUtils.get();
@@ -42,7 +42,7 @@ const token = TokenUtils.get();
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuY...
 ```
 
-#### Decode
+### `decode(token)`
 Decodes a token. A falsy token will return `{}`.
 ```js
 const decodedToken = TokenUtils.decode(token);
@@ -54,7 +54,7 @@ const decodedToken = TokenUtils.decode(token);
 // }
 ```
 
-#### Get expiration date
+### `getExpirationDate(token)`
 Returns expiration date as unix timestamp (ms) or null if the `exp` property is not defined in the decoded token.
 ```js
 const expirationDate = TokenUtils.getExpirationDate(token);
@@ -62,19 +62,19 @@ const expirationDate = TokenUtils.getExpirationDate(token);
 // 1525700161562
 ```
 
-#### Check if expired
+### `isExpired(token)`
 Returns a `boolean` value specifying if token is expired or not.
 ```js
 const isExpired = TokenUtils.isExpired(token);
 ```
 
-#### Check if valid
+### `isValid(token)`
 Checks if token is valid, simply by checking its existence. You can optionally use a validation function as a secondary param. In that case, the validation function should return a `boolean` value.
 ```js
 const isValid = TokenUtils.isValid(token, validationFunc);
 ```
 
-#### Remove from storage
+### `remove(token)`
 Removes token from storage
 ```js
 TokenUtils.remove(token);
@@ -99,6 +99,6 @@ const token = await TokenUtils.get();
 // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEiLCJuY...
 ```
 
-## External dependencies
+## Dependencies
 
 This package depends on [jwt-decode](https://github.com/auth0/jwt-decode) for token decoding.
